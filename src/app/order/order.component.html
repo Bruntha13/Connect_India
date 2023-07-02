@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3">
+        <div class="row">
+            <h1 class="text-center">Order</h1>
+            <hr/>
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>Plan Id</label>
+                        <input type="text" class="form-control" id="planid" [(ngModel)]="order.planid" 
+                        name="planid">
+                    </div>
+                    <div class="form-group">
+                        <label>Seller Name</label>
+                        <input type="text" class="form-control" id="sellername" [(ngModel)]="order.sellername" 
+                        name="sellername">
+                    </div>
+                    <div class="form-group">
+                        <label>Buyer Name</label>
+                        <input type="text" class="form-control" id="buyername" [(ngModel)]="order.buyername" 
+                        name="buyername">
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="text" class="form-control" id="buyermobile" [(ngModel)]="order.buyermobile" 
+                        name="buyermobile">
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" class="form-control" id="buyeraddress" [(ngModel)]="order.buyeraddress" 
+                        name="buyeraddress">
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Mode</label>
+                        <input type="text" class="form-control" id="paymentmode" [(ngModel)]="order.paymentmode" 
+                        name="paymentmode">
+                    </div>
+                    <br/>
+                    <button class="btn btn-success" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

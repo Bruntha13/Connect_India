@@ -1,0 +1,43 @@
+<body>
+    <div class="container">
+        <div>
+            <img class="logo" src="https://www.connectintourism.com/wp-content/uploads/2021/11/Website-Logo.png"
+                alt="logoimg" width="200px" />
+        </div>
+        <div class="table">
+            <h2>Plans Available</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plan ID</th>
+                        <th>Seller Name</th>
+                        <th>Plan Price</th>
+                        <th>Validity</th>
+                        <th>Details</th>
+                        <th>Plan Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let plans of plan">
+                        <td>{{plans.planid}}</td>
+                        <td>{{plans.sellername}}</td>
+                        <td>{{plans.planprice}}</td>
+                        <td>{{plans.validity}}</td>
+                        <td>{{plans.details}}</td>
+                        <td>{{plans.plantype}}</td>
+
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+        <div class="buttons">
+            
+            <label class="label" for="sname">Search Plan by Seller</label><br>
+            <input class="input" type="text" id="sname" name="sname" [(ngModel)]="sname">
+            <button class="find" (click)="sellerPlan(sname)">Find</button><br>
+            <button class="buy" (click)="buy()">Buy Now!</button>
+            
+        </div>
+    </div>
+</body>

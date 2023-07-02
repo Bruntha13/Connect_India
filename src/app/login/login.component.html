@@ -1,0 +1,40 @@
+<body>
+    <div class="container">
+        <div class="desc">
+            <div>
+                <img class="logo" src="https://www.connectintourism.com/wp-content/uploads/2021/11/Website-Logo.png"
+                    alt="logoimg" width="300px" />
+            </div>
+            Hellllooo to all customers and sellers!!!<br />
+            <br />&emsp;Through CONNECT INDIA we provide you all a common digital broadband platform for sellers and
+            buyers, where different providers
+            can add their plan details and customers can choose the suitable plan of any brand without switching
+            between multiple websites of various broadbands.<br />
+            <br />
+            <b>CONNECT INDIA; WE UNITE INDIA</b><br />
+            <br />
+        </div>
+       <div class="form">
+        <form (ngSubmit)="onSubmit()">
+            <h3 class="login">Log In</h3>
+            <div class="form-group">
+                <label>Email ID</label><br>
+                <input type="text" class="form-control" id="useremail" [(ngModel)]="usercred.useremail" 
+                name="useremail">
+            </div>
+            <div class="form-group">
+                <label>Password</label><br>
+                <input type="password" class="form-control" id="userpassword" [(ngModel)]="usercred.userpassword" 
+                name="userpassword">
+            </div>
+            <div class="form-group">
+                <label>Role</label><br>
+                <input type="text" class="form-control" id="role" [(ngModel)]="usercred.role" 
+                name="role">
+            </div>
+            <br/>
+            <button class="button" type="submit">Log in</button><a routerLink="/register" >Not a member? Register</a>
+        </form>
+       </div>
+    </div>
+</body>
