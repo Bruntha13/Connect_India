@@ -1,27 +1,40 @@
-<div>
-    <h2>Plans List</h2>
-</div>
-<table class="table table-striped table-bordered">
-    <thead>
-        <tr>
-            <th>Plan ID</th>
-            <th>Seller Name</th>
-            <th>Plan Price</th>
-            <th>Validity</th>
-            <th>Details</th>
-            <th>Plan Type</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let plans of plan">
-            <td>{{plans.planid}}</td>
-            <td>{{plans.sellername}}</td>
-            <td>{{plans.planprice}}</td>
-            <td>{{plans.validity}}</td>
-            <td>{{plans.details}}</td>
-            <td>{{plans.plantype}}</td>
-        </tr>
-    </tbody>
-</table>
-<button (click)="goToPlanList()">Go to Plans List</button><br>
-<button (click)="buy()">BUY</button><br>
+<body>
+    <div class="container">
+        <div>
+            <img class="logo" src="https://www.connectintourism.com/wp-content/uploads/2021/11/Website-Logo.png"
+                alt="logoimg" width="200px" />
+        </div>
+        <div class="table">
+            <h2>Plans List of {{sname}}</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plan ID</th>
+                        <th>Seller Name</th>
+                        <th>Plan Price</th>
+                        <th>Validity</th>
+                        <th>Details</th>
+                        <th>Plan Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let plans of plan">
+                        <td>{{plans.planid}}</td>
+                        <td>{{plans.sellername}}</td>
+                        <td>{{plans.planprice}}</td>
+                        <td>{{plans.validity}}</td>
+                        <td>{{plans.details}}</td>
+                        <td>{{plans.plantype}}</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="buttons">
+            <button class="redirect" (click)="goToPlanList()">Go to Plans List</button><br>
+            <button class="buy" (click)="buy()">Buy Now!</button><br>
+
+        </div>
+    </div>
+</body>

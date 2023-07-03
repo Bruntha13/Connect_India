@@ -1,39 +1,50 @@
-<div class="row">
-    <div class="card col-md-6 offset-md-3">
-        <div class="row">
-            <h1 class="text-center">Create Plan</h1>
-            <hr/>
-            <div class="card-body">
-                <form (ngSubmit)="onSubmit()">
-                    <div class="form-group">
-                        <label>Seller Name</label>
-                        <input type="text" class="form-control" id="sellername" [(ngModel)]="plan.sellername" 
-                        name="sellername">
-                    </div>
-                    <div class="form-group">
-                        <label>Plan Price</label>
-                        <input type="text" class="form-control" id="planprice" [(ngModel)]="plan.planprice" 
-                        name="planprice">
-                    </div>
-                    <div class="form-group">
-                        <label>Validity</label>
-                        <input type="text" class="form-control" id="validity" [(ngModel)]="plan.validity" 
-                        name="validity">
-                    </div>
-                    <div class="form-group">
-                        <label>Plan Details</label>
-                        <input type="text" class="form-control" id="details" [(ngModel)]="plan.details" 
-                        name="details">
-                    </div>
-                    <div class="form-group">
-                        <label>Plan Type</label>
-                        <input type="text" class="form-control" id="plantype" [(ngModel)]="plan.plantype" 
-                        name="plantype">
-                    </div>
-                    <br/>
-                    <button class="btn btn-success" type="submit">Submit</button>
-                </form>
-            </div>
+<body>
+    <div class="container">
+        <div>
+            <img class="logo" src="https://www.connectintourism.com/wp-content/uploads/2021/11/Website-Logo.png"
+                alt="logoimg" width="200px" />
+        </div>
+        <div class="form">
+            <h2>Create Plan</h2>
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>Seller Name</label><br>
+                    <input type="text" class="form-control" id="sellername" [(ngModel)]="plan.sellername" 
+                    name="sellername">
+                </div>
+                <div class="form-group">
+                    <label>Plan Price</label><br>
+                    <input type="text" class="form-control" id="planprice" [(ngModel)]="plan.planprice" 
+                    name="planprice">
+                </div>
+                <div class="form-group">
+                    <label>Validity</label><br>
+                    <input type="text" class="form-control" id="validity" [(ngModel)]="plan.validity" 
+                    name="validity">
+                </div>
+                <div class="form-group">
+                    <label>Plan Details</label><br>
+                    <input type="text" class="form-control" id="details" [(ngModel)]="plan.details" 
+                    name="details">
+                </div>
+                <div class="form-group">
+                    <label>Plan Type</label><br>
+                    <input type="text" class="form-control" id="plantype" [(ngModel)]="plan.plantype" 
+                    name="plantype">
+                </div>
+                <br/>
+                <button class="submit" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="buttons">
+            
+            <button class="update" (click)="updatePlan()">Update Plan</button><br>
+
+            <button class="go" (click)="goToPlanList()">Go to Plans List</button><br>
+
+            <label> Search Plan by Seller</label><br>
+            <input type="text" id="sname" name="sname" [(ngModel)]="sname">
+            <button class="search" (click)="sellerPlan(sname)">Search</button><br>
         </div>
     </div>
-</div>
+</body>

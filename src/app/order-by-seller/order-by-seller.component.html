@@ -1,28 +1,40 @@
-<div>
-    <h2>Orders List</h2>
-</div>
-<table class="table table-striped table-bordered">
-    <thead>
-        <tr>
-            <th>Order ID</th>
-            <th>Plan ID</th>
-            <th>Seller Name</th>
-            <th>Buyer Name</th>
-            <th>Buyer Mobile</th>
-            <th>Buyer Address</th>
-            <th>Payment Mode</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let orders of order">
-            <td>{{orders.orderid}}</td>
-            <td>{{orders.planid}}</td>
-            <td>{{orders.sellername}}</td>
-            <td>{{orders.buyername}}</td>
-            <td>{{orders.buyermobile}}</td>
-            <td>{{orders.buyeraddress}}</td>
-            <td>{{orders.paymentmode}}</td>
-        </tr>
-    </tbody>
-</table>
-<button (click)="goToPlanList()">Go to Plans List</button><br>
+<body>
+    <div class="container">
+        <div>
+            <img class="logo" src="https://www.connectintourism.com/wp-content/uploads/2021/11/Website-Logo.png"
+                alt="logoimg" width="200px" />
+        </div>
+        <div class="table">
+            <h2>Orders List of {{sellername}}</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Plan ID</th>
+                        <th>Seller Name</th>
+                        <th>Buyer Name</th>
+                        <th>Buyer Mobile</th>
+                        <th>Buyer Address</th>
+                        <th>Payment Mode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let orders of order">
+                        <td>{{orders.orderid}}</td>
+                        <td>{{orders.planid}}</td>
+                        <td>{{orders.sellername}}</td>
+                        <td>{{orders.buyername}}</td>
+                        <td>{{orders.buyermobile}}</td>
+                        <td>{{orders.buyeraddress}}</td>
+                        <td>{{orders.paymentmode}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="buttons">
+            <button class="go" (click)="goToAllOrders()">Go to All Orders</button>
+            <button class="go" (click)="goToPlanList()">Go to Plans List</button><br>
+        </div>
+    </div>
+</body>

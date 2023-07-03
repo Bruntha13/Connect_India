@@ -12,7 +12,7 @@ export class CreatePlanComponent implements OnInit {
   ngOnInit(): void {}
  
   plan:Plan=new Plan();
-
+  sname:string='';
   constructor(private planService:PlanService,
     private router:Router){}
 
@@ -35,4 +35,12 @@ export class CreatePlanComponent implements OnInit {
       console.log(this.plan);
       this.savePlan();
     }
+
+    updatePlan(){
+      this.router.navigate(['update-plan']);
+    }
+    sellerPlan(sname:string){
+      this.router.navigate(['seller-plan',sname])
+    }
+    
 }

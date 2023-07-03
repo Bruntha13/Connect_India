@@ -42,5 +42,12 @@ export class SellerPlanComponent implements OnInit{
     goToPlanList(){
       this.router.navigate(['plan-list']);
     }
+    addPlan(){
+      this.router.navigate(['create-plan'])
+    }
+    
+  updatePlan(){
+    this.router.navigate(['update-plan']);
+  }
 
 }

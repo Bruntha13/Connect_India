@@ -10,6 +10,7 @@ import { OrderListService } from '../order-list.service';
 })
 export class OrderListComponent implements OnInit{
 
+  sellername:string="";
   order:any;
   constructor(private orderListService:OrderListService,
     private router: Router) { }
@@ -25,6 +26,9 @@ export class OrderListComponent implements OnInit{
 
   goToPlanList(){
     this.router.navigate(['plan-list']);
+  }
+  orderBySeller(sellername:string){
+    this.router.navigate(['order-by-seller',sellername])
   }
 
 }

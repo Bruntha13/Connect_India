@@ -10,13 +10,13 @@ import { RegisterService } from '../register.service';
 export class RegisterComponent implements OnInit{
 
   user:User=new User();
-  constructor(private resisterService:RegisterService,
+  constructor(private registerService:RegisterService,
     private router:Router){}
 
   ngOnInit(): void {}
 
   registerUser(){
-    this.resisterService.registerUser(this.user).subscribe(data=>{
+    this.registerService.registerUser(this.user).subscribe(data=>{
       console.log(data);
       alert("Successfully Registered")
       this.goToLogin()

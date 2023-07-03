@@ -32,5 +32,8 @@ export class OrderBySellerComponent implements OnInit{
   goToPlanList(){
     this.router.navigate(['plan-list']);
   }
+  goToAllOrders(){
+    this.router.navigate(['order-list'])
+  }
 
 }
